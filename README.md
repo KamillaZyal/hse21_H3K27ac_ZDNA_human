@@ -10,12 +10,12 @@
 ```
 zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (аналогично для второго файла)
 ```
--Переведем координаты ChIP-seq пиков к версии генома hg19 с помощью liftOver:
-     -Загрузим необходимый файл для конверации hg38 в hg19:
+- Переведем координаты ChIP-seq пиков к версии генома hg19 с помощью liftOver:
+     - Загрузим необходимый файл для конверации hg38 в hg19:
     ```
     wget https://hgdownload.cse.ucsc.edu/goldenpath/hg38/liftOver/hg38ToHg19.over.chain.gz
     ```
-    -Запустим liftOver на файлах .bed:
+    - Запустим liftOver на файлах .bed:
     >Используем команду в формате: liftOver input.bed hg18ToHg19.over.chain.gz output.bed unlifted.bed,
     >где input.bed - файл с исходными данными, hg18ToHg19.over.chain.gz - вспомогательный файл для конвертации,
     >output.bed - файл, содержащий конвертированные координаты, unlifted.bed будет содержать все позиции генома, которые нельзя перевести в нужную вурсию генома
