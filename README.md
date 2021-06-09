@@ -37,10 +37,10 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg19.filtered.hist.png) 
       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF926NKP.hg19.filtered.hist.png)
 - Статистика по количеству пиков:
-| | ENCFF926NKP|ENCFF389RXK|
-|----------------|:---------:|
-|Для версии генома ***hg38***| |
-|Для версии генома ***hg19***| текст | текст |
-|Для версии генома ***filter_peaks***| текст | 
+|  | ENCFF926NKP | ENCFF389RXK |
+|----------------|:---------:|:---------:|
+| Для версии генома ***hg38*** | 118990 | 116220 |
+| Для версии генома ***hg19*** | 118767 | 115997 | 
+| Для версии генома ***filter_peaks*** | 115115 | 112077 |  
 
     
