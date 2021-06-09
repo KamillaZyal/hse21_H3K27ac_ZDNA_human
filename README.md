@@ -78,7 +78,7 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
       Выбираем версию генома (вкладка Genomes) => MyData => Custom Tracks
        ```
     - Добавим сustom Tracks командами:
-    ###**Для filtered.bed файлов**
+      ### **Для filtered.bed файлов**
          ```
          track visibility=dense name="ENCFF926NKP" description="H3K27ac_A549.ENCFF926NKP.hg19.filtered.bed"
          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.ENCFF926NKP.hg19.filtered.bed
@@ -86,7 +86,7 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
          track visibility=dense name="ENCFF389RXK" description="H3K27ac_A549.ENCFF389RXK.hg19.filtered.bed"
          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.ENCFF389RXK.hg19.filtered.bed
          ```
-    ###**Для объединеного файла**
+      ### **Для объединеного файла**
           ```
           track visibility=dense name="ChIP_merge"  color=50,50,200   description="H3K27ac_A549.merge.hg19.bed"
           https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.merge.hg19.bed
