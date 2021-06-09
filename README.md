@@ -33,9 +33,9 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
 - Проведем фильтрацию пиков по длине:
  >Установим порог 5kb (не длиннее 5000 пар оснований)
  >>Для обработки данных используем скрипт */src/filter_peaks.R - раздел Remove long peaks*
-    - ***Гистограммы для filter_peaks***
-    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg19.filtered.hist.png) 
-    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF926NKP.hg19.filtered.hist.png)
+   - ***Гистограммы для filter_peaks***
+   ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg19.filtered.hist.png) 
+   ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF926NKP.hg19.filtered.hist.png)
 - Статистика по количеству пиков:
   |  | ENCFF926NKP | ENCFF389RXK |
   |----------------|:---------:|:---------:|
