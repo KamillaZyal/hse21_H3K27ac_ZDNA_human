@@ -63,8 +63,10 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
 ## Анализ расположения пиков относительно аннотированных генов
 - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
     - Строим график типа пай-чарт (ENCFF389RXK - ENCFF926NKP):
+      ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF389RXK.hg19.filtered.plotAnnoPie.png) 
+      ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF926NKP.hg19.filtered.plotAnnoPie.png)
     > Для обработки данных используем скрипт */src/chip_seeker.R.R*
-   ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF389RXK.hg19.filtered.plotAnnoPie.png) 
-   ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF926NKP.hg19.filtered.plotAnnoPie.png)
+    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF389RXK.hg19.filtered.plotAnnoPie.png) 
+    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF926NKP.hg19.filtered.plotAnnoPie.png)
     
     
