@@ -93,12 +93,37 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
           ```
      - Ссылка на визуализированные данные:
        ```
-       http://genome.ucsc.edu/cgi-bin/hgTracks?  db=hg19&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1%3A713015%2D714074&hgsid=1124127881_aqi4RsQ9ComYFPGaaXGHrZoGQc3q
+      http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
        ```
      - Сделаем вывод о корректности работы bedtools merge:
        ```
        Ниже представлен скриншот участка с координатами chr3:187,432,810-187,482,809, подтверждающий корректную работу утилиты bedtools merge
        ```
        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
+# Анализ участков вторичной стр-ры ДНК
+## Загрузка файл со вторичной стр-рой ДНК
+- Загружаем файл соответствующий предсказания ZDNA_DeepZ:
+```
+ wget https://github.com/Nazar1997/DeepZ/blob/master/annotation/DeepZ.bed
+ ```
+ ## Потроение диаграмм
+ - Построим гистограмму длин участков:
+  > Для обработки данных используем скрипт */src/len_hist.R*
+    - ***Гистограммы для DeepZ***
+    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg38.init.hist.png) 
+    - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
+        - Строим график типа пай-чарт:
+          > Для обработки данных используем скрипт */src/chip_seeker.R.R*
+   ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png)
+# Анализ пересечений гистоновой метки и стр-ры ДНК
+## Первичная обработка
+- Находие пересечения гистоновой меткой и стр-рами ДНК:
+   ```
+   bedtools intersect  -a DeepZ.bed   -b  H3K27ac_A549.merge.hg19.bed  >  H3K427ac_A549.intersect_with_DeepZ.bed 
+   ```
+- Построим гистограмму длин участков:
+  > Для обработки данных используем скрипт */src/len_hist.R*
+    - ***Гистограммы для H3K427ac_A549.intersect_with_DeepZ***
+    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.H3K27ac_A549.intersect_with_DeepZ.png) 
     
     
