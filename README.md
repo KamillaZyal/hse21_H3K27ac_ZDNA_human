@@ -30,9 +30,17 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
     - ***Гистограммы для версии генома hg19***
     ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg19.init.hist.png) 
     ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF926NKP.hg19.init.hist.png)
-    | LEFT | CENTER | RIGHT |
-    |----------------|:---------:|----------------:|
-    | По левому краю | По центру | По правому краю |
-    |  ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg19.init.hist.png) | ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF926NKP.hg19.init.hist.png) | текст |
+- Проведем фильтрацию пиков по длине:
+ >Установим порог 5kb (не длиннее 5000 пар оснований)
+  >> Для обработки данных используем скрипт */src/filter_peaks.R - раздел Remove long peaks*
+    - ***Гистограммы для filter_peaks***
+      ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg19.filtered.hist.png) 
+      ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF926NKP.hg19.filtered.hist.png)
+- Статистика по количеству пиков:
+| | ENCFF926NKP|ENCFF389RXK|
+|----------------|:---------:|
+|Для версии генома ***hg38***| |
+|Для версии генома ***hg19***| текст | текст |
+|Для версии генома ***filter_peaks***| текст | 
 
     
