@@ -22,6 +22,7 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
      ```
     liftOver   H3K4me3_A549.ENCFF832EOL.hg38.bed   hg38ToHg19.over.chain.gz   H3K4me3_A549.ENCFF832EOL.hg19.bed   H3K4me3_A549.ENCFF832EOL.unmapped.bed (аналогично для второго     файла)
     ```
+## Анализ длины пиков
 - Построим гистограмму длин участков для каждого эксперимента до и после конвертации к нужной версии генома:
   > Для обработки данных используем скрипт */src/filter_peaks.R*
     - ***Гистограммы для версии генома hg38***
@@ -59,10 +60,11 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
   | Для версии генома ***hg38*** | 118990 | 116220 |
   | Для версии генома ***hg19*** | 118767 | 115997 | 
   | Для ***filter_peaks*** | 115115 | 112077 |  
+## Анализ расположения пиков относительно аннотированных генов
 - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
     - Строим график типа пай-чарт:
       > Для обработки данных используем скрипт */src/chip_seeker.R.R*
-      ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF389RXK.hg19.filtered.plotAnnoPie.png) 
-      ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF926NKP.hg19.filtered.plotAnnoPie.png)
+     ![ENCFF389RXK](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF389RXK.hg19.filtered.plotAnnoPie.png) 
+     ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.H3K27ac_A549.ENCFF926NKP.hg19.filtered.plotAnnoPie.png)
     
     
