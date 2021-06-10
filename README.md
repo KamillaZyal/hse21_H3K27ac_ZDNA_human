@@ -108,13 +108,13 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
  ```
  ## Потроение диаграмм
  - Построим гистограмму длин участков:
-  > Для обработки данных используем скрипт */src/len_hist.R*
-    - ***Гистограммы для DeepZ***
-    ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg38.init.hist.png) 
-    - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
-        - Строим график типа пай-чарт:
-          > Для обработки данных используем скрипт */src/chip_seeker.R.R*
-   ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png)
+     > Для обработки данных используем скрипт */src/len_hist.R*
+     - ***Гистограммы для DeepZ***
+       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg38.init.hist.png) 
+ - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
+     > Для обработки данных используем скрипт */src/chip_seeker.R.R*
+     - Строим график типа пай-чарт:
+       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png)
 # Анализ пересечений гистоновой метки и стр-ры ДНК
 ## Первичная обработка
 - Находие пересечения гистоновой меткой и стр-рами ДНК:
@@ -125,5 +125,31 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
   > Для обработки данных используем скрипт */src/len_hist.R*
     - ***Гистограммы для H3K427ac_A549.intersect_with_DeepZ***
     ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.H3K27ac_A549.intersect_with_DeepZ.png) 
+## Визуализация данных в геномном браузере 
+- Визуализируем исходные два набора ChIP-seq пиков, а также их объединение в UCSC Genome Browser:
+    - На сайте UCSC Genome Browser:
+      ```
+      Выбираем версию генома (вкладка Genomes) => MyData => Custom Tracks
+       ```
+    - Добавим сustom Tracks командами:
+      ### **Для DeepZ.bed файлов**
+         ```
+         track visibility=dense name="DeepZ"  color=0,200,0  description="DeepZ"
+         https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/DeepZ.bed
+         ```
+      ### **Для intersect_with_DeepZ.bed файла**
+          ```
+          track visibility=dense name="intersect_with_DeepZ"  color=200,0,0  description="H3K27ac_A549.intersect_with_DeepZ.bed"
+          https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/raw/main/data/H3K27ac_A549.intersect_with_DeepZ.bed
+          ```
+     - Ссылка на визуализированные данные:
+       ```
+      http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
+       ```
+     - Найдем пересечения между гистоновой меткой и стр-рой ДНК (рядом с аннотированным геном):
+        ### **Координаты chr3:187,432,810-187,482,809**
+        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
+        ### **Координаты chr3:187,432,810-187,482,809**
+        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
     
     
