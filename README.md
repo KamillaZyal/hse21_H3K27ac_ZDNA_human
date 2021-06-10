@@ -155,7 +155,7 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
 - Используем R-библиотеку ChIPpeakAnno для ассоциаций пересееней (диапозон: -2000-3000):
   > Для обработки данных используем скрипт */src/len_hist.R*
  ```
- Получаем файлы: H3K27ac_A549.intersect_with_DeepZ.genes_uniq, H3K27ac_A549.intersect_with_DeepZ.genes 
+ Получаем файлы: H3K27ac_A549.intersect_with_DeepZ.genes_uniq - IDs генов (список генов), H3K27ac_A549.intersect_with_DeepZ.genes 
  ```
  [H3K27ac_A549.intersect_with_DeepZ.genes_uniq](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/H3K27ac_A549.intersect_with_DeepZ.genes_uniq.txt),
  [H3K27ac_A549.intersect_with_DeepZ.genes](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/H3K27ac_A549.intersect_with_DeepZ.genes.txt)
