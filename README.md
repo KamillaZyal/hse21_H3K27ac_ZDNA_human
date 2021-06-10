@@ -93,7 +93,7 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
           ```
      - Ссылка на визуализированные данные:
        ```
-      http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
+       http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
        ```
      - Сделаем вывод о корректности работы bedtools merge:
        ```
