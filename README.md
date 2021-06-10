@@ -110,11 +110,11 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
  - Построим гистограмму длин участков:
      > Для обработки данных используем скрипт */src/len_hist.R*
      - ***Гистограммы для DeepZ***
-       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg38.init.hist.png) 
+       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png) 
  - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
      > Для обработки данных используем скрипт */src/chip_seeker.R.R*
      - Строим график типа пай-чарт:
-       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png)
+         ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.DeepZ.plotAnnoPie.png)
 # Анализ пересечений гистоновой метки и стр-ры ДНК
 ## Первичная обработка
 - Находие пересечения гистоновой меткой и стр-рами ДНК:
@@ -144,12 +144,26 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
           ```
      - Ссылка на визуализированные данные:
        ```
-      http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
+       http://genome.ucsc.edu/s/KamillaZyal/hg19
        ```
      - Найдем пересечения между гистоновой меткой и стр-рой ДНК (рядом с аннотированным геном):
-        ### **Координаты chr3:187,432,810-187,482,809**
-        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
-        ### **Координаты chr3:187,432,810-187,482,809**
-        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
-    
+        ### **Координаты  chr3:105,085,585-105,085,615**
+        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/intersect1.png) 
+        ### **Координаты chr14:105,877,676-105,877,817**
+        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/intersect2.png)
+## Ассоция полученных пересечений с ближайшими генами
+- Используем R-библиотеку ChIPpeakAnno для ассоциаций пересееней (диапозон: -2000-3000):
+  > Для обработки данных используем скрипт */src/len_hist.R*
+ ```
+ Получаем файлы: H3K27ac_A549.intersect_with_DeepZ.genes_uniq - IDs генов (список генов), 
+                 H3K27ac_A549.intersect_with_DeepZ.genes - полная информация об ассоциации пиков с генами
+ ```
+ [H3K27ac_A549.intersect_with_DeepZ.genes_uniq](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/H3K27ac_A549.intersect_with_DeepZ.genes_uniq.txt),
+ [H3K27ac_A549.intersect_with_DeepZ.genes](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/H3K27ac_A549.intersect_with_DeepZ.genes.txt)
+## GO-анализ
+- Для этого можно воспользоваться сайтом [http://pantherdb.org/](http://pantherdb.org/):
+  > Загрузим список геном из H3K27ac_A549.intersect_with_DeepZ.genes_uniq
+- Наиболее значимые категории (минимальные значения FDR):
+    > Полный список [pantherdb_GO_analysis](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/pantherdb_GO_analysis.txt.txt)
+![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/GOan.png)
     
