@@ -144,12 +144,23 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
           ```
      - Ссылка на визуализированные данные:
        ```
-      http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
+       http://genome.ucsc.edu/s/KamillaZyal/hg19
        ```
      - Найдем пересечения между гистоновой меткой и стр-рой ДНК (рядом с аннотированным геном):
-        ### **Координаты chr3:187,432,810-187,482,809**
-        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
-        ### **Координаты chr3:187,432,810-187,482,809**
-        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/mergeUCSC.png) 
-    
+        ### **Координаты  chr3:105,085,585-105,085,615**
+        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/intersect1.png) 
+        ### **Координаты chr14:105,877,676-105,877,817**
+        ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/intersect2.png)
+## Ассоция полученных пересечений с ближайшими генами
+- Используем R-библиотеку ChIPpeakAnno для ассоциаций пересееней (диапозон: -2000-3000):
+  > Для обработки данных используем скрипт */src/len_hist.R*
+ ```
+ Получаем файлы: [H3K27ac_A549.intersect_with_DeepZ.genes_uniq](http://pantherdb.org/)
+ ```
+## GO-анализ
+- Для этого можно воспользоваться сайтом [http://pantherdb.org/](http://pantherdb.org/):
+  > Загрузим список геном из H3K27ac_A549.intersect_with_DeepZ.genes_uniq
+- Наиболее значимые категории (минимальные значения FDR):
+  > Полный список [pantherdb_GO_analysis](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/pantherdb_GO_analysis.txt.txt)
+![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/GOan.png)
     
