@@ -110,11 +110,11 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
  - Построим гистограмму длин участков:
      > Для обработки данных используем скрипт */src/len_hist.R*
      - ***Гистограммы для DeepZ***
-       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/filter_peaks.H3K27ac_A549.ENCFF389RXK.hg38.init.hist.png) 
+       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png) 
  - Рассмотрим, где располагаются пики гистоновой метки относительно аннотированных генов:
      > Для обработки данных используем скрипт */src/chip_seeker.R.R*
      - Строим график типа пай-чарт:
-       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/len_hist.DeepZ.png)
+       ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/chip_seeker.DeepZ.plotAnnoPie.png)
 # Анализ пересечений гистоновой метки и стр-ры ДНК
 ## Первичная обработка
 - Находие пересечения гистоновой меткой и стр-рами ДНК:
@@ -157,10 +157,12 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
  ```
  Получаем файлы: [H3K27ac_A549.intersect_with_DeepZ.genes_uniq](http://pantherdb.org/)
  ```
+ [H3K27ac_A549.intersect_with_DeepZ.genes_uniq](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/H3K27ac_A549.intersect_with_DeepZ.genes_uniq.txt)
+ [H3K27ac_A549.intersect_with_DeepZ.genes](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/H3K27ac_A549.intersect_with_DeepZ.genes.txt)
 ## GO-анализ
 - Для этого можно воспользоваться сайтом [http://pantherdb.org/](http://pantherdb.org/):
   > Загрузим список геном из H3K27ac_A549.intersect_with_DeepZ.genes_uniq
 - Наиболее значимые категории (минимальные значения FDR):
-  > Полный список [pantherdb_GO_analysis](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/pantherdb_GO_analysis.txt.txt)
+    > Полный список [pantherdb_GO_analysis](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/data/pantherdb_GO_analysis.txt.txt)
 ![Alt-текст](https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/blob/main/images/GOan.png)
     
