@@ -87,10 +87,10 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.ENCFF389RXK.hg19.filtered.bed
          ```
       ### **Для объединеного файла**
-          ```
-          track visibility=dense name="ChIP_merge"  color=50,50,200   description="H3K27ac_A549.merge.hg19.bed"
-          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.merge.hg19.bed
-          ```
+         ```
+         track visibility=dense name="ChIP_merge"  color=50,50,200   description="H3K27ac_A549.merge.hg19.bed"
+         https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.merge.hg19.bed
+         ```
      - Ссылка на визуализированные данные:
        ```
        http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
@@ -132,13 +132,13 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
     - На сайте UCSC Genome Browser:
       ```
       Выбираем версию генома (вкладка Genomes) => MyData => Custom Tracks
-       ```
+      ```
     - Добавим сustom Tracks командами:
       ### **Для DeepZ.bed файлов**
-         ```
-         track visibility=dense name="DeepZ"  color=0,200,0  description="DeepZ"
-         https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/DeepZ.bed
-         ```
+          ```
+          track visibility=dense name="DeepZ"  color=0,200,0  description="DeepZ"
+          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/DeepZ.bed
+          ```
       ### **Для intersect_with_DeepZ.bed файла**
           ```
           track visibility=dense name="intersect_with_DeepZ"  color=200,0,0  description="H3K27ac_A549.intersect_with_DeepZ.bed"
