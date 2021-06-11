@@ -87,10 +87,10 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.ENCFF389RXK.hg19.filtered.bed
          ```
       ### **Для объединеного файла**
-         ```
-         track visibility=dense name="ChIP_merge"  color=50,50,200   description="H3K27ac_A549.merge.hg19.bed"
-         https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.merge.hg19.bed
-         ```
+          ```
+          track visibility=dense name="ChIP_merge"  color=50,50,200   description="H3K27ac_A549.merge.hg19.bed"
+          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/H3K27ac_A549.merge.hg19.bed
+          ```
      - Ссылка на визуализированные данные:
        ```
        http://genome.ucsc.edu/s/KamillaZyal/ENCFF926NKP_ENCFF389RXK_filtered
