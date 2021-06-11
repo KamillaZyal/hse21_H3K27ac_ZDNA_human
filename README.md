@@ -135,15 +135,15 @@ zcat ENCFF832EOL.bed.gz  |  cut -f1-5 > H3K4me3_A549.ENCFF832EOL.hg38.bed (ан�
       ```
     - Добавим сustom Tracks командами:
       ### **Для DeepZ.bed файлов**
-          ```
-          track visibility=dense name="DeepZ"  color=0,200,0  description="DeepZ"
-          https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/DeepZ.bed
-          ```
+         ```
+         track visibility=dense name="DeepZ"  color=0,200,0  description="DeepZ"
+         https://raw.githubusercontent.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/main/data/DeepZ.bed
+         ```
       ### **Для intersect_with_DeepZ.bed файла**
-          ```
-          track visibility=dense name="intersect_with_DeepZ"  color=200,0,0  description="H3K27ac_A549.intersect_with_DeepZ.bed"
-          https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/raw/main/data/H3K27ac_A549.intersect_with_DeepZ.bed
-          ```   
+         ```
+         track visibility=dense name="intersect_with_DeepZ"  color=200,0,0  description="H3K27ac_A549.intersect_with_DeepZ.bed"
+         https://github.com/KamillaZyal/hse21_H3K27ac_ZDNA_human/raw/main/data/H3K27ac_A549.intersect_with_DeepZ.bed
+         ```   
      - Ссылка на визуализированные данные:
        ```
        http://genome.ucsc.edu/s/KamillaZyal/hg19
